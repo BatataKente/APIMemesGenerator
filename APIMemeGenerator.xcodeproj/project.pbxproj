@@ -14,6 +14,8 @@
 		142F8CE928E85ED200E5B3B5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 142F8CE728E85ED200E5B3B5 /* LaunchScreen.storyboard */; };
 		142F8CF428E85FE100E5B3B5 /* NetWork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142F8CF328E85FE100E5B3B5 /* NetWork.swift */; };
 		142F8CFB28E87EF200E5B3B5 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142F8CFA28E87EF200E5B3B5 /* UIView.swift */; };
+		142F8D0128E88FAE00E5B3B5 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142F8D0028E88FAE00E5B3B5 /* ViewModel.swift */; };
+		142F8D0328E8909000E5B3B5 /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142F8D0228E8909000E5B3B5 /* Assets.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		142F8CEA28E85ED200E5B3B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		142F8CF328E85FE100E5B3B5 /* NetWork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetWork.swift; sourceTree = "<group>"; };
 		142F8CFA28E87EF200E5B3B5 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		142F8D0028E88FAE00E5B3B5 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		142F8D0228E8909000E5B3B5 /* Assets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +65,7 @@
 				142F8CF228E85FC500E5B3B5 /* AppUtils */,
 				142F8CF128E85FB100E5B3B5 /* AppDelegate */,
 				142F8CE028E85ECF00E5B3B5 /* View.swift */,
+				142F8D0028E88FAE00E5B3B5 /* ViewModel.swift */,
 				142F8CE728E85ED200E5B3B5 /* LaunchScreen.storyboard */,
 				142F8CEA28E85ED200E5B3B5 /* Info.plist */,
 			);
@@ -81,6 +86,7 @@
 			children = (
 				142F8CF828E87EE100E5B3B5 /* Extensions */,
 				142F8CE528E85ED200E5B3B5 /* Assets.xcassets */,
+				142F8D0228E8909000E5B3B5 /* Assets.swift */,
 				142F8CF328E85FE100E5B3B5 /* NetWork.swift */,
 			);
 			path = AppUtils;
@@ -165,10 +171,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				142F8CFB28E87EF200E5B3B5 /* UIView.swift in Sources */,
+				142F8D0328E8909000E5B3B5 /* Assets.swift in Sources */,
 				142F8CE128E85ECF00E5B3B5 /* View.swift in Sources */,
 				142F8CDD28E85ECF00E5B3B5 /* AppDelegate.swift in Sources */,
 				142F8CF428E85FE100E5B3B5 /* NetWork.swift in Sources */,
 				142F8CDF28E85ECF00E5B3B5 /* SceneDelegate.swift in Sources */,
+				142F8D0128E88FAE00E5B3B5 /* ViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
