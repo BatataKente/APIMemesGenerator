@@ -42,9 +42,12 @@ class NetWork {
             
             DispatchQueue.main.async {
                 
-                if let error = error {print(error); escape(nil)}
                 if let response = response {print(response)}
-                if let data = data {escape(data)}
+                if let data = data {escape(data); return}
+                
+                if let error = error {print(error)}
+                
+                escape(nil); return
             }
         }
     }
