@@ -23,7 +23,7 @@ class NetWork {
     func requestMeme(top: String? = "Top",
                      bottom: String? = "Bottom",
                      meme: String? = "",
-                     _ escape: @escaping (Data) -> ()) {
+                     _ escape: @escaping (Data?) -> ()) {
         
         var url: URL? = nil
         
@@ -36,12 +36,13 @@ class NetWork {
             url = URL(string: "\(API.url)/meme?meme=\(meme ?? "")&top=\(top ?? "")&bottom=\(bottom ?? "")")
         }
         
-        guard let url = url else {return}
+        guard let url = url else {escape(nil); return}
+        
         task(from: url) {data, response, error in
             
             DispatchQueue.main.async {
                 
-                if let error = error {print(error); return}
+                if let error = error {print(error); escape(nil)}
                 if let response = response {print(response)}
                 if let data = data {escape(data)}
             }

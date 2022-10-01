@@ -23,7 +23,7 @@ class ViewModel {
             string: placeholder,
             attributes: [
                 
-                NSAttributedString.Key.font: font,
+                NSAttributedString.Key.font: font as Any,
                 NSAttributedString.Key.foregroundColor: UIColor.lightGray
             ]
         )

@@ -43,10 +43,13 @@ class View: UIViewController {
                                      bottom: self.textFields[1].text,
                                      meme: self.textFields[2].text) {data in
                 
+                if let data = data {
+                    
+                    self.imageView.image = UIImage(data: data)
+                }
+                
                 button.isEnabled = true
                 button.setTitleColor(.white, for: .normal)
-                
-                self.imageView.image = UIImage(data: data)
             }
         }
         
@@ -75,6 +78,12 @@ class View: UIViewController {
                 button.setTitle(text, for: .normal)
                 button.titleLabel?.font = App.smallFont
                 
+                button.layer.borderWidth = 1
+                button.layer.borderColor = UIColor.white.cgColor
+                
+                button.titleLabel?.translatesAutoresizingMaskIntoConstraints = false
+                button.titleLabel?.leadingAnchor.constraint(equalTo: button.leadingAnchor).isActive = true
+                
                 let action = UIAction{_ in
                     
                     self.textFields[2].text = button.currentTitle
@@ -90,8 +99,8 @@ class View: UIViewController {
         
         let stackToScroll = UIStackView(arrangedSubviews: createButtons(netWork.memes))
         stackToScroll.axis = .vertical
-        stackToScroll.alignment = .leading
-        
+        stackToScroll.backgroundColor = .darkGray
+            
         let scrollView = UIScrollView()
         scrollView.addSubview(stackToScroll)
         
