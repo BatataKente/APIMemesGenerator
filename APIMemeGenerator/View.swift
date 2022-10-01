@@ -52,9 +52,15 @@ class View: UIViewController {
         
         let action = UIAction{_ in
             
+            button.isEnabled = false
+            button.setTitleColor(.black, for: .normal)
+            
             self.netWork.requestMeme(top: textFields[0].text,
                                      bottom: textFields[1].text,
                                      meme: textFields[2].text) {data in
+                
+                button.isEnabled = true
+                button.setTitleColor(.white, for: .normal)
                 
                 self.imageView.image = UIImage(data: data)
             }
